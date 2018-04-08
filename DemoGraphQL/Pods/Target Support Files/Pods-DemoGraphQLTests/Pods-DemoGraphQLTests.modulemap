@@ -1,0 +1,6 @@
+framework module Pods_DemoGraphQLTests {
+  umbrella header "Pods-DemoGraphQLTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
