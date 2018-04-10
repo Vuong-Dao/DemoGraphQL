@@ -13,6 +13,8 @@ I used the Apollo framework for this demo
 pod "Apollo"
 ```
 
+You can check lastest version here: https://cocoapods.org/pods/Apollo
+
 ## Adding a code generation build step
 
 This is most important step. 
@@ -24,12 +26,12 @@ On your application targets’ “Build Phases” settings tab, click the “+�
 APOLLO_FRAMEWORK_PATH="$(eval find $FRAMEWORK_SEARCH_PATHS -name "Apollo.framework" -maxdepth 1)"
 
 if [ -z "$APOLLO_FRAMEWORK_PATH" ]; then
-  echo "error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project."
-  exit 1
+echo "error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project."
+exit 1
 fi
 
 cd "${SRCROOT}/${TARGET_NAME}"
-$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift
+$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate '**/*.graphql' --schema schema.json --output API.swift
 ```
 
 ## Adding a schema file
@@ -40,6 +42,17 @@ If you haven't schema file, you will get a build error such as:
 
 ```
 Cannot find GraphQL schema file […]
+```
+
+I used this server for my demo
+```
+https://graphql-demo.now.sh/
+```
+
+Download schema.json file by run this command:
+
+```
+apollo-codegen download-schema https://graphql-demo.now.sh/graphql --output schema.json
 ```
 
 ## Build

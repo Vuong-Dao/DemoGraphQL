@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Apollo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let apollo = ApolloClient(url: URL(string: "https://graphql-demo.now.sh/graphql")!)
+    var allBooks : [AllBooksQuery.Data.AllBook]?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        apollo.watch(query: AllBooksQuery()) { (result, error) in
+            if let res = result {
+                self.allBooks = res.data?.allBooks
+            }
+        }
         return true
     }
 

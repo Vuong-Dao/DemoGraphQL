@@ -6,7 +6,7 @@ target 'DemoGraphQL' do
   use_frameworks!
 
   # Pods for DemoGraphQL
-  pod "Apollo"
+  pod 'Apollo', '~> 0.8'
 
   target 'DemoGraphQLTests' do
     inherit! :search_paths

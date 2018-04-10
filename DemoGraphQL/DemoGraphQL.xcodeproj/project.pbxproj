@@ -14,6 +14,9 @@
 		3F42D7182079C4AC00D47938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F42D7162079C4AC00D47938 /* LaunchScreen.storyboard */; };
 		3F42D7232079C4AC00D47938 /* DemoGraphQLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D7222079C4AC00D47938 /* DemoGraphQLTests.swift */; };
 		3F42D72E2079C4AC00D47938 /* DemoGraphQLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D72D2079C4AC00D47938 /* DemoGraphQLUITests.swift */; };
+		3F557315207CB50B005E7A46 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F557314207CB50B005E7A46 /* schema.json */; };
+		3F557317207CB54D005E7A46 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F557316207CB54D005E7A46 /* API.swift */; };
+		3F9F1C83207CF35B005E1DF1 /* BookServices.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3F9F1C82207CF35B005E1DF1 /* BookServices.graphql */; };
 		7DCB31EFE537ABC764B1040D /* Pods_DemoGraphQLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0643EBFD23FFE71EBB94C498 /* Pods_DemoGraphQLUITests.framework */; };
 		E56351EFEC79CC29741617A9 /* Pods_DemoGraphQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D757897599BD1E2F98F21B3 /* Pods_DemoGraphQL.framework */; };
 		E8383A8A676737A16525B461 /* Pods_DemoGraphQLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3790FEC0A01DD267963172A /* Pods_DemoGraphQLTests.framework */; };
@@ -52,6 +55,9 @@
 		3F42D7292079C4AC00D47938 /* DemoGraphQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoGraphQLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F42D72D2079C4AC00D47938 /* DemoGraphQLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoGraphQLUITests.swift; sourceTree = "<group>"; };
 		3F42D72F2079C4AC00D47938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F557314207CB50B005E7A46 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		3F557316207CB54D005E7A46 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		3F9F1C82207CF35B005E1DF1 /* BookServices.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookServices.graphql; sourceTree = "<group>"; };
 		86010B5A74B7D8913B445865 /* Pods-DemoGraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoGraphQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoGraphQL/Pods-DemoGraphQL.release.xcconfig"; sourceTree = "<group>"; };
 		860154E8700868E6FB8E1C49 /* Pods-DemoGraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoGraphQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoGraphQL/Pods-DemoGraphQL.debug.xcconfig"; sourceTree = "<group>"; };
 		8D757897599BD1E2F98F21B3 /* Pods_DemoGraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoGraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,12 +130,15 @@
 		3F42D70C2079C4AB00D47938 /* DemoGraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				3F557316207CB54D005E7A46 /* API.swift */,
+				3F557314207CB50B005E7A46 /* schema.json */,
 				3F42D70D2079C4AB00D47938 /* AppDelegate.swift */,
 				3F42D70F2079C4AB00D47938 /* ViewController.swift */,
 				3F42D7112079C4AB00D47938 /* Main.storyboard */,
 				3F42D7142079C4AC00D47938 /* Assets.xcassets */,
 				3F42D7162079C4AC00D47938 /* LaunchScreen.storyboard */,
 				3F42D7192079C4AC00D47938 /* Info.plist */,
+				3F9F1C82207CF35B005E1DF1 /* BookServices.graphql */,
 			);
 			path = DemoGraphQL;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 			buildConfigurationList = 3F42D7322079C4AC00D47938 /* Build configuration list for PBXNativeTarget "DemoGraphQL" */;
 			buildPhases = (
 				B1D47C1022EFF33B39C4E260 /* [CP] Check Pods Manifest.lock */,
+				3F557310207CA766005E7A46 /* Generate Apollo GraphQL API */,
 				3F42D7062079C4AB00D47938 /* Sources */,
 				3F42D7072079C4AB00D47938 /* Frameworks */,
 				3F42D7082079C4AB00D47938 /* Resources */,
@@ -278,6 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9F1C83207CF35B005E1DF1 /* BookServices.graphql in Resources */,
+				3F557315207CB50B005E7A46 /* schema.json in Resources */,
 				3F42D7182079C4AC00D47938 /* LaunchScreen.storyboard in Resources */,
 				3F42D7152079C4AC00D47938 /* Assets.xcassets in Resources */,
 				3F42D7132079C4AB00D47938 /* Main.storyboard in Resources */,
@@ -333,6 +345,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3F557310207CA766005E7A46 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate '**/*.graphql' --schema schema.json --output API.swift";
 		};
 		407BAB65B58A9C785A0DF5AF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -456,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F42D7102079C4AB00D47938 /* ViewController.swift in Sources */,
+				3F557317207CB54D005E7A46 /* API.swift in Sources */,
 				3F42D70E2079C4AB00D47938 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +660,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DemoGraphQL/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuongdao.DemoGraphQL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -650,7 +680,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DemoGraphQL/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuongdao.DemoGraphQL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -668,7 +701,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93QPUSS3JM;
 				INFOPLIST_FILE = DemoGraphQLTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuongdao.DemoGraphQLTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -686,7 +723,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93QPUSS3JM;
 				INFOPLIST_FILE = DemoGraphQLTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuongdao.DemoGraphQLTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -703,7 +744,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93QPUSS3JM;
 				INFOPLIST_FILE = DemoGraphQLUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuongdao.DemoGraphQLUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -720,7 +765,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93QPUSS3JM;
 				INFOPLIST_FILE = DemoGraphQLUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuongdao.DemoGraphQLUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
